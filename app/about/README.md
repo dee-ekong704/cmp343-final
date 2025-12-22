@@ -17,3 +17,6 @@ This project is a full-stack Next.js application built using the App Router.
 
 ## Live Site
 Deployed using Vercel.
+
+## Deployment
+This project is deployed on Vercel for production use.
