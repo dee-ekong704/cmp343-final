@@ -20,7 +20,8 @@ export default function Home() {
 
         {/* Title + description */}
         <h1 className="mt-10 text-4xl font-semibold tracking-tight">
-          Next.js Full-Stack Demo
+        Next.js Full-Stack Web Application
+
         </h1>
         <p className="mt-3 max-w-2xl text-zinc-300">
           This project demonstrates Server Components, Client Components, an API
