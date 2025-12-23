@@ -3,72 +3,56 @@ import ClientCounter from "./ClientCounter";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <main className="mx-auto max-w-4xl px-6 py-14">
-        {/* Header */}
-        <div className="flex items-center gap-3">
-          <Image
-            src="/next.svg"
-            alt="Next.js logo"
-            width={90}
-            height={20}
-            className="invert"
-            priority
-          />
-          <span className="text-sm text-zinc-400">CMP 343 Final Project</span>
-        </div>
+    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-center gap-8 py-32 px-16 bg-white dark:bg-black text-center">
 
-        {/* Title + description */}
-        <h1 className="mt-10 text-4xl font-semibold tracking-tight">
-        Next.js Full-Stack Web Application
-
+        {/* Title */}
+        <h1 className="text-3xl font-semibold text-black dark:text-zinc-50">
+          Real-Time Student Feedback Dashboard
         </h1>
-        <p className="mt-3 max-w-2xl text-zinc-300">
-          This project demonstrates Server Components, Client Components, an API
-          route, and frontend-to-backend communication, deployed on Vercel.
+
+        {/* Description */}
+        <p className="text-zinc-600 dark:text-zinc-400 max-w-md">
+          An anonymous feedback system that allows students to submit live
+          feedback during class and lets professors view real-time analytics.
         </p>
 
-        {/* Cards */}
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <section className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
-            <h2 className="text-lg font-medium">Client Component</h2>
-            <p className="mt-1 text-sm text-zinc-400">
-              Interactive UI using state + fetching from an API route.
-            </p>
-            <div className="mt-4">
-              <ClientCounter />
-            </div>
-          </section>
+        {/* Client-side interactivity */}
+        <ClientCounter />
 
-          <section className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
-            <h2 className="text-lg font-medium">Routing + API</h2>
-            <p className="mt-1 text-sm text-zinc-400">
-              Navigate to another route and view the API endpoint.
-            </p>
+        {/* Navigation Links — THIS IS STEP 8 */}
+        <div className="flex gap-6 mt-4">
+          <a
+            href="/submit"
+            className="text-sm font-medium text-blue-600 hover:underline"
+          >
+            Submit Feedback
+          </a>
 
-            <div className="mt-4 flex flex-wrap gap-3">
-              <a
-                href="/about"
-                className="inline-flex items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-medium text-black hover:opacity-90"
-              >
-                About Page →
-              </a>
+          <a
+            href="/dashboard"
+            className="text-sm font-medium text-blue-600 hover:underline"
+          >
+            View Dashboard
+          </a>
 
-              <a
-                href="/api/hello"
-                className="inline-flex items-center justify-center rounded-xl border border-zinc-700 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-900"
-              >
-                View API JSON →
-              </a>
-            </div>
-          </section>
+          <a
+            href="/about"
+            className="text-sm font-medium text-blue-600 hover:underline"
+          >
+            About Project
+          </a>
         </div>
 
-        {/* Footer */}
-        <p className="mt-12 text-xs text-zinc-500">
-          Built with Next.js (App Router), Tailwind CSS, API Routes, and deployed
-          on Vercel.
-        </p>
+        {/* Logo (optional, harmless) */}
+        <Image
+          className="dark:invert mt-8"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={100}
+          height={20}
+          priority
+        />
       </main>
     </div>
   );
